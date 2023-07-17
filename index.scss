@@ -1,0 +1,122 @@
+@import "variables.scss";
+html {
+  font-family: Montserrat, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  height: 100vh;
+  background-color: #000;
+}
+.price-container {
+  display: flex;
+  margin: auto;
+  background: #000;
+}
+.price-card {
+  display: flex;
+  flex-direction: column;
+  margin-right: 18px;
+  color: $color-txt;
+  background-color: $card-background;
+  height: 770px;
+  width: 380px;
+  &:nth-of-type(2) {
+    position: relative;
+    .price-card__price,
+    .price-card__order-btn {
+      background-color: $price-bgcolor-blue;
+    }
+  }
+  &:nth-of-type(3) {
+    .price-card__price,
+    .price-card__order-btn {
+      background-color: $price-bgcolor-red;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    margin: 33px 140px;
+    &_below-text {
+      font-size: 20px;
+      font-weight: 300;
+    }
+  }
+  &__price {
+    background-color: $price-bgcolor;
+
+    &_text {
+      font-size: 55px;
+      font-weight: 700;
+      padding: 19px 110px;
+      text-align: center;
+    }
+  }
+  &__description {
+    padding: 40px 26px;
+    font-weight: 300;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  &__options-list {
+    font-weight: 300;
+    font-size: 15px;
+    list-style-type: none;
+    padding: 0;
+    &_item {
+      display: flex;
+      align-items: center;
+      height: 50px;
+      &:nth-child(odd) {
+        background-color: #2a3438;
+      }
+    }
+  }
+  &__order-btn {
+    font-size: 14px;
+    font-weight: 400px;
+    height: 40px;
+    width: 154px;
+    color: $color-txt;
+    background-color: $price-bgcolor;
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+  }
+}
+
+.option__image {
+  margin: 18px 22px;
+  width: 15px;
+  height: 13px;
+}
+.price-card__badge {
+    position: absolute;
+    right: 0;
+    height: 122px;
+    width: 123px;
+    overflow: hidden;
+    &_ribbon {
+        height: 25px;
+        width: 147px;
+        line-height: 25px;
+        font-size: 14px;
+        font-weight: 700;
+        position: relative;
+        background-color: red;
+        text-align: center;
+        transform: rotate(45deg);
+        top: 31px;
+        right: -6px;
+    }
+}
